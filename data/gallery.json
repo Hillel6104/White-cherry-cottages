@@ -8,7 +8,7 @@
     "Cabins",
     "Grounds",
     "Pool",
-    "Winter"
+    "Shul & Mikvah"
   ],
   "images": [
     {
@@ -59,12 +59,27 @@
     {
       "src": "/assets/img/uploads/unnamed-8-.webp",
       "alt": "Shul ",
-      "category": "Cabins"
+      "category": "Shul & Mikvah"
     },
     {
       "src": "/assets/img/uploads/unnamed-10-.webp",
-      "alt": "Cabisn",
+      "alt": "Cabins",
       "category": "Cabins"
+    },
+    {
+      "src": "/assets/img/uploads/unnamed-3-.webp",
+      "alt": "Shul ",
+      "category": "Shul & Mikvah"
+    },
+    {
+      "src": "/assets/img/uploads/unnamed-12-.webp",
+      "alt": "Kids fun ",
+      "category": "Grounds"
+    },
+    {
+      "src": "/assets/img/uploads/unnamed-7-.webp",
+      "alt": "Outside",
+      "category": "Grounds"
     }
   ]
 }
