@@ -6,21 +6,21 @@
     "linkLabel": "Contact us"
   },
   "brand": "White Cherry Cottages",
-  "logo": "/assets/img/uploads/chatgpt-image-may-17-2026-06_08_14-pm.png",
+  "logo": "",
   "social": {
     "instagram": "",
     "facebook": "",
     "whatsapp": ""
   },
-  "phone": "(555) 555-0100",
+  "phone": "(845) 328-0808",
   "tagline": "A family retreat in the White Mountains",
   "address": {
-    "line1": "123 Mountain View Road",
+    "line1": "1267 Main St., Bethlehem, NH",
     "line2": "",
     "city": "Bethlehem",
     "state": "NH",
     "zip": "03574"
   },
-  "phoneHref": "tel:+15555550100",
-  "email": "info@whitecherrycottages.com"
+  "phoneHref": "tel:+18453280808",
+  "email": "Booking@Whitecherrycottages.com"
 }
