@@ -23,8 +23,8 @@ collections:
   # 1. Site-wide settings: announcement bar, contact basics, footer blurb.
   # -------------------------------------------------------------------------
   - name: "site"
-    label: "Site Settings"
-    description: "Announcement bar, phone, email, address, footer text — appears on every page."
+    label: "Contact Info & Banner"
+    description: "Phone, email, address, announcement bar, footer text. These appear on every page of the site — edit them here, not on the Contact page."
     files:
       - name: "site"
         label: "Site"
@@ -255,7 +255,7 @@ collections:
   # -------------------------------------------------------------------------
   - name: "contact"
     label: "Contact Page"
-    description: "Contact page copy, office hours, map, and driving distances."
+    description: "Contact page copy, office hours, map, and driving distances. ▸ To change the phone number, email address, or street address, use the 'Contact Info & Banner' section above — those appear on every page, not just here."
     files:
       - name: "contact"
         label: "Contact"
