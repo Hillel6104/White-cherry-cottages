@@ -10,8 +10,9 @@ backend:
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
 
-# Allow the owner to save drafts before publishing.
-publish_mode: editorial_workflow
+# Simple mode: clicking "Publish" commits the change straight to main and
+# Netlify rebuilds the site. No draft/ready/publish stages. If the owner
+# ever wants a review step back, change this to `publish_mode: editorial_workflow`.
 
 # Site URLs help Decap render preview links.
 site_url: https://whitecherrycottages.netlify.app
