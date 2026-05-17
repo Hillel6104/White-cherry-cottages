@@ -38,15 +38,17 @@
 
   <!-- Navigation -->
   <header class="sticky top-0 z-40 nav-glass border-b border-wood/10">
-    <nav class="max-w-7xl mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-2 font-display text-xl text-ink">
+    <nav class="max-w-7xl mx-auto px-4 lg:px-6 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-2 font-display text-xl text-ink min-w-0"
+         :class="!siteLoaded && 'invisible'">
         <template x-if="site && site.logo">
-          <img :src="site.logo" :alt="site.brand || 'White Cherry Cottages'" class="h-10 w-auto object-contain" onerror="wccImgFallback(this)" />
+          <img :src="site.logo" :alt="site.brand || 'White Cherry Cottages'"
+               class="h-14 sm:h-16 w-auto max-w-[260px] object-contain" onerror="wccImgFallback(this)" />
         </template>
         <template x-if="!site || !site.logo">
           <span class="flex items-center gap-2">
-            <span aria-hidden="true" class="text-cherry">🍒</span>
-            <span x-text="site && site.brand ? site.brand : 'White Cherry Cottages'">White Cherry Cottages</span>
+            <span aria-hidden="true" class="text-cherry text-2xl">🍒</span>
+            <span x-text="site && site.brand ? site.brand : 'White Cherry Cottages'"></span>
           </span>
         </template>
       </a>
@@ -146,14 +148,39 @@
       </div>
     </section>
 
-    <!-- Quote -->
-    <section class="py-20">
-      <div class="max-w-3xl mx-auto px-6 text-center">
-        <svg class="w-10 h-10 mx-auto text-wood-light mb-6" viewBox="0 0 32 32" fill="currentColor"><path d="M9 7h7v7H12v3a4 4 0 01-4 4v-3a2 2 0 002-2H9V7zm10 0h7v7h-4v3a4 4 0 01-4 4v-3a2 2 0 002-2h-1V7z"/></svg>
-        <blockquote class="font-display text-2xl lg:text-3xl leading-snug text-ink/90 italic"
-                    x-text="home && home.quote ? home.quote.text : ''"></blockquote>
-        <p class="mt-6 text-sm uppercase tracking-[0.2em] text-wood"
-           x-text="home && home.quote ? home.quote.attribution : ''"></p>
+    <!-- Reviews — marquee if 2+ reviews, single pull-quote otherwise -->
+    <section class="py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 lg:px-6">
+        <div class="text-center mb-10">
+          <p class="uppercase tracking-[0.25em] text-xs text-wood mb-3">Stories from guests</p>
+          <h2 class="font-display text-3xl lg:text-4xl">What families say.</h2>
+        </div>
+
+        <!-- Auto-scrolling marquee (2+ reviews) -->
+        <div x-show="hasReviews()" x-cloak class="marquee">
+          <div class="marquee-track py-2">
+            <template x-for="(r, i) in reviewLoop()" :key="i">
+              <figure class="w-[300px] sm:w-[360px] shrink-0 bg-white border border-wood/10 rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center gap-1 mb-3" x-show="r.rating">
+                  <template x-for="n in (r.rating || 0)" :key="n">
+                    <svg class="w-4 h-4 text-cherry" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.9-4.3 4.1 1 5.9L10 15l-5.2 2.8 1-5.9L1.5 7.8l5.9-.9L10 1.5z"/></svg>
+                  </template>
+                </div>
+                <blockquote class="font-display italic text-ink/90 leading-snug text-lg" x-text="r.text"></blockquote>
+                <figcaption class="mt-4 text-xs uppercase tracking-[0.18em] text-wood" x-text="r.attribution"></figcaption>
+              </figure>
+            </template>
+          </div>
+        </div>
+
+        <!-- Fallback single quote -->
+        <div x-show="!hasReviews()" x-cloak class="max-w-3xl mx-auto text-center">
+          <svg class="w-10 h-10 mx-auto text-wood-light mb-6" viewBox="0 0 32 32" fill="currentColor"><path d="M9 7h7v7H12v3a4 4 0 01-4 4v-3a2 2 0 002-2H9V7zm10 0h7v7h-4v3a4 4 0 01-4 4v-3a2 2 0 002-2h-1V7z"/></svg>
+          <blockquote class="font-display text-2xl lg:text-3xl leading-snug text-ink/90 italic"
+                      x-text="home && home.quote ? home.quote.text : ''"></blockquote>
+          <p class="mt-6 text-sm uppercase tracking-[0.2em] text-wood"
+             x-text="home && home.quote ? home.quote.attribution : ''"></p>
+        </div>
       </div>
     </section>
 
@@ -219,6 +246,14 @@
         async load () {
           try { this.home = await fetch('/data/home.json').then(r => r.json()); }
           catch (e) { console.error(e); }
+        },
+        hasReviews () {
+          return !!(this.home && Array.isArray(this.home.reviews) && this.home.reviews.length >= 2);
+        },
+        reviewLoop () {
+          // Duplicate the array so the marquee loop is seamless.
+          if (!this.hasReviews()) return [];
+          return [...this.home.reviews, ...this.home.reviews];
         }
       };
     }
