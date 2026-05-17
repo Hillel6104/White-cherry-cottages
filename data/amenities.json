@@ -2,28 +2,32 @@
   "intro": {
     "eyebrow": "On the property",
     "heading": "Everything your family needs, on site.",
-    "body": "We built White Cherry Cottages around the things our own families look for in a getaway: a real shul within walking distance, a mikvah on the property, a heated pool the kids will live in, and a freezer of kosher staples for the night you don't feel like cooking."
+    "body": "White Cherry Cottages is around the things our own families look for in a getaway: a real shul & a mikvah on the property, a heated pool, a kids park the kids will love, a fireplace for the nights, and a freezer of kosher staples for the night you don't feel like cooking."
   },
   "items": [
     {
       "title": "Heated Outdoor Pool",
       "body": "Open Memorial Day through Labor Day, heated to 84°F. Separate swim hours posted weekly. Lounge chairs, umbrellas, and a shallow end for the little ones.",
-      "iconKey": "sun"
+      "iconKey": "sun",
+      "image": "/assets/img/uploads/10c240_4686aba13db74b068c1de6726f5ae6d6.jpg"
     },
     {
       "title": "Book Room",
       "body": "A quiet, light-filled library stocked with seforim, novels, kids' books, and board games. Open all day; help yourself.",
-      "iconKey": "book-open"
+      "iconKey": "book-open",
+      "image": "/assets/img/uploads/10c240_cb8b9aca2f744ed2b3959ce4ff75bc59.jpg"
     },
     {
       "title": "Playground",
       "body": "Wooden play structure, swings, slide, and a sandbox — set in a fenced clearing visible from most of the cottages.",
-      "iconKey": "swing"
+      "iconKey": "swing",
+      "image": "/assets/img/uploads/10c240_e7f223607d814532aed74093ef942fbd.jpg"
     },
     {
       "title": "On-Site Shul",
       "body": "A small but proper shul on the property with daily minyanim during peak season. Walking distance from every cottage.",
-      "iconKey": "star"
+      "iconKey": "star",
+      "image": "/assets/img/uploads/unnamed-4-.webp"
     },
     {
       "title": "Mikvah",
@@ -38,7 +42,7 @@
   ],
   "closing": {
     "heading": "A Shabbos-friendly community in the White Mountains.",
-    "body": "Pre-arranged Shabbos meal delivery, hot-water urns and blechs in every cottage, key-card-free Shabbos entry, and a lobby of fellow families just like yours.",
+    "body": "Hot-water urns and hot plates, and a lobby of fellow families just like yours.",
     "ctaLabel": "Ask about a stay",
     "ctaHref": "/contact.html"
   }
