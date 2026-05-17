@@ -1,20 +1,19 @@
 {
   "intro": {
     "heading": "Sixteen cottages. Pick the one that fits your family.",
-    "body": "Each cabin is fully furnished with linens, a stocked kosher kitchen or kitchenette, climate control, and a private porch. Sizes range from one-room suites for couples to roomy 3.5-room cottages that sleep up to ten. Use the filters below to find the right fit."
+    "body": "Each cabin is fully furnished with linens, a kosher kitchen, and climate control. Sizes range from one-room suites for couples to roomy 3.5-room cottages that sleep up to ten. Use the filters below to find the right fit."
   },
   "cabins": [
     {
-      "slug": "birch-suite",
-      "name": "The Birch Suite",
-      "roomCount": 1,
-      "sleeps": 2,
-      "shortDescription": "A bright one-room suite with a queen bed, kitchenette, and a porch facing the woods.",
-      "longDescription": "Our smallest and most peaceful cottage. The Birch Suite is a single open room with a queen bed, a kosher kitchenette (microwave, induction burner, fridge, sink), a full bath, and french doors opening onto a private porch. Ideal for couples or a parent traveling with one child.",
+      "slug": "Cottege 1 ",
+      "name": "Cottege 1 - The 1 Bedroom Cabin ",
+      "roomCount": 2,
+      "sleeps": 1,
+      "shortDescription": "A bright one-bedroom suite with a 2-bed, kitchenette.",
+      "longDescription": "Our small and peaceful cottage. This Suite is a single open room with 2 beds, a kosher kitchenette (microwave, fridge, sink), and a full bath. Ideal for couples or a parent traveling with one child.",
       "features": [
-        "Queen bed",
+        "2 beds",
         "Kosher kitchenette",
-        "Private porch",
         "AC + heat",
         "Free Wi-Fi"
       ],
@@ -23,69 +22,57 @@
       ]
     },
     {
-      "slug": "maple-suite",
-      "name": "The Maple Suite",
-      "roomCount": 1,
+      "slug": "Cottege 2 ",
+      "name": "Cottege 2 - The 1 Bedroom Cabin ",
+      "roomCount": 2,
       "sleeps": 3,
-      "shortDescription": "One-room cottage with a queen bed plus a daybed nook — perfect for a small family.",
-      "longDescription": "The Maple Suite adds a built-in daybed nook to the standard suite layout, giving you sleeping space for a third guest without sacrificing the open, airy feel. Includes a full kosher kitchenette and a covered porch.",
+      "shortDescription": "A bright one-bedroom suite with a 2-bed, kitchenette.",
+      "longDescription": "Our small and peaceful cottage. This Suite is a single open room with 2 beds, a kosher kitchenette (microwave, fridge, sink), and a full bath. Ideal for couples or a parent traveling with one child.",
       "features": [
-        "Queen + daybed",
+        "2 Beds",
         "Kosher kitchenette",
-        "Covered porch",
         "AC + heat",
         "Free Wi-Fi"
       ],
       "images": [
-        "/assets/img/placeholders/cabin-maple-1.jpg",
-        "/assets/img/placeholders/cabin-maple-2.jpg"
+        "/assets/img/uploads/cottage-2.jpg"
       ]
     },
     {
-      "slug": "cedar-suite",
-      "name": "The Cedar Suite",
+      "slug": "Cottege 3",
+      "name": "Cottege 3 - The 1 Bedroom Cabin ",
+      "roomCount": 2,
+      "sleeps": 3,
+      "shortDescription": "A cozy private cottage with a bright bedroom, kitchenette, sitting area, and private bathroom.",
+      "longDescription": "A cozy private cottage with a bright bedroom, kitchenette, sitting area, and private bathroom. It has a clean, modern cabin feel, with wood floors, exposed ceiling beams, and a comfortable space for a quiet getaway.",
+      "features": [
+        "Kitchenette",
+        "Sitting area with sofa",
+        "Dining table",
+        "Air conditioning + Ceiling fan",
+        "Free Wi-Fi"
+      ],
+      "images": [
+        "/assets/img/uploads/cottage-3.jpg"
+      ]
+    },
+    {
+      "slug": "Cottege 4 ",
+      "name": "Cottege 4",
       "roomCount": 1,
       "sleeps": 2,
-      "shortDescription": "A cozy one-room retreat with a wood-burning stove and an oversized soaking tub.",
-      "longDescription": "The Cedar Suite is built for slow weekends. A real wood-burning stove anchors the room; the bathroom features an oversized soaking tub. A favorite for anniversaries and quiet getaways.",
-      "features": [
-        "King bed",
-        "Wood-burning stove",
-        "Soaking tub",
-        "Kitchenette",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-cedar-1.jpg",
-        "/assets/img/placeholders/cabin-cedar-2.jpg"
-      ]
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
     },
     {
-      "slug": "pine-cottage",
-      "name": "The Pine Cottage",
-      "roomCount": 2,
-      "sleeps": 4,
-      "shortDescription": "Two-room cottage with a separate bedroom, full kosher kitchen, and a sunny living room.",
-      "longDescription": "A separate bedroom (queen) plus a living room with a sleeper sofa, full kosher kitchen, dining table for four, and a wraparound porch. The Pine is our most popular two-room layout.",
-      "features": [
-        "Queen + sleeper sofa",
-        "Full kosher kitchen",
-        "Wraparound porch",
-        "Dining for 4",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-pine-1.jpg",
-        "/assets/img/placeholders/cabin-pine-2.jpg"
-      ]
-    },
-    {
-      "slug": "spruce-cottage",
-      "name": "The Spruce Cottage",
-      "roomCount": 2,
-      "sleeps": 5,
-      "shortDescription": "Bedroom + bunk nook, full kitchen, and a stone fireplace in the living room.",
-      "longDescription": "Spruce pairs a queen bedroom with a built-in bunk nook (two twins) for kids — they get their own space, you get a real night's sleep. Full kosher kitchen, stone fireplace, and a deck overlooking the pines.",
+      "slug": "Cottege 5",
+      "name": "Cottege 5",
+      "roomCount": 4,
+      "sleeps": 6,
+      "shortDescription": "Cottage 5 includes two twin beds, a bunk-bed area, kitchenette, private bathroom, ",
+      "longDescription": "A bright and cozy cottage with a clean modern cabin feel. Cottage 5 includes two twin beds, a bunk-bed area, kitchenette, private bathroom, and an outdoor picnic space. A nice choice for a small family or a simple quiet stay.",
       "features": [
         "Queen + bunk nook",
         "Stone fireplace",
@@ -94,218 +81,124 @@
         "Free Wi-Fi"
       ],
       "images": [
-        "/assets/img/placeholders/cabin-spruce-1.jpg",
-        "/assets/img/placeholders/cabin-spruce-2.jpg"
+        "/assets/img/uploads/cottage-5.jpg"
       ]
     },
     {
-      "slug": "hemlock-cottage",
-      "name": "The Hemlock Cottage",
-      "roomCount": 2,
-      "sleeps": 4,
-      "shortDescription": "Two queen bedrooms and a galley kitchen — built for grandparents-and-grandkids trips.",
-      "longDescription": "Two equally-sized queen bedrooms, each with its own bath, share a central living area and galley kosher kitchen. Designed so multigenerational guests each get privacy without giving up the shared table.",
-      "features": [
-        "2 queen bedrooms",
-        "2 bathrooms",
-        "Galley kosher kitchen",
-        "Private entrances",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-hemlock-1.jpg",
-        "/assets/img/placeholders/cabin-hemlock-2.jpg"
-      ]
-    },
-    {
-      "slug": "aspen-cottage",
-      "name": "The Aspen Cottage",
-      "roomCount": 2.5,
-      "sleeps": 5,
-      "shortDescription": "Two bedrooms plus a sleeping loft, full kitchen, and a screened porch.",
-      "longDescription": "A queen primary, a kids' room with two twins, and a sleeping loft for an extra guest. Full kosher kitchen, screened porch, and a quiet wooded lot at the edge of the property.",
-      "features": [
-        "2 bedrooms + loft",
-        "Screened porch",
-        "Full kosher kitchen",
-        "Wooded lot",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-aspen-1.jpg",
-        "/assets/img/placeholders/cabin-aspen-2.jpg"
-      ]
-    },
-    {
-      "slug": "willow-cottage",
-      "name": "The Willow Cottage",
-      "roomCount": 2.5,
-      "sleeps": 6,
-      "shortDescription": "Two bedrooms, a den with a pullout, full kitchen, and a fenced backyard.",
-      "longDescription": "Willow's small den off the living room doubles as an extra sleeping space (queen pullout) and a quiet spot for a nursing mother or an early riser. The fenced backyard is a parent's best friend.",
-      "features": [
-        "2 bedrooms + den",
-        "Fenced yard",
-        "Full kosher kitchen",
-        "Pullout sleeper",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-willow-1.jpg",
-        "/assets/img/placeholders/cabin-willow-2.jpg"
-      ]
-    },
-    {
-      "slug": "chestnut-cottage",
-      "name": "The Chestnut Cottage",
-      "roomCount": 3,
-      "sleeps": 6,
-      "shortDescription": "Three bedrooms, two baths, full kitchen, and a big front porch with rockers.",
-      "longDescription": "The classic family layout: three bedrooms (queen + two twins x2), two full bathrooms, an open living-dining area, full kosher kitchen, and a deep porch with rocking chairs. Steps from the playground.",
-      "features": [
-        "3 bedrooms",
-        "2 bathrooms",
-        "Full kosher kitchen",
-        "Porch with rockers",
-        "Near playground"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-chestnut-1.jpg",
-        "/assets/img/placeholders/cabin-chestnut-2.jpg"
-      ]
-    },
-    {
-      "slug": "sycamore-cottage",
-      "name": "The Sycamore Cottage",
-      "roomCount": 3,
+      "slug": "Cottege 6 ",
+      "name": "Cottege 6",
+      "roomCount": 4,
       "sleeps": 7,
-      "shortDescription": "Three bedrooms, fireplace, full kitchen — our most-requested summer cabin.",
-      "longDescription": "A queen primary plus two kids' rooms (one with bunks, one with twins), full kosher kitchen with an island, a wood-burning fireplace, and a wide deck. Books up fastest for July and August.",
-      "features": [
-        "3 bedrooms (one with bunks)",
-        "Wood-burning fireplace",
-        "Kitchen island",
-        "Deck",
-        "Free Wi-Fi"
-      ],
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
       "images": [
-        "/assets/img/placeholders/cabin-sycamore-1.jpg",
-        "/assets/img/placeholders/cabin-sycamore-2.jpg"
+        "/assets/img/uploads/cottage-6.jpg"
       ]
     },
     {
-      "slug": "juniper-cottage",
-      "name": "The Juniper Cottage",
-      "roomCount": 3,
-      "sleeps": 8,
-      "shortDescription": "Three bedrooms, two baths, mudroom — built for big families and lots of gear.",
-      "longDescription": "Juniper's standout feature is the mudroom — a real one, with cubbies, hooks, and a utility sink. Three bedrooms, two baths, full kosher kitchen, and a back patio with a picnic table. Sleeps up to eight.",
-      "features": [
-        "3 bedrooms",
-        "Mudroom + utility sink",
-        "Patio with picnic table",
-        "Full kosher kitchen",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-juniper-1.jpg",
-        "/assets/img/placeholders/cabin-juniper-2.jpg"
-      ]
+      "slug": "Cottege 7",
+      "name": "Cottege 7",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
     },
     {
-      "slug": "linden-cottage",
-      "name": "The Linden Cottage",
-      "roomCount": 3,
+      "slug": "Cottege 8",
+      "name": "Cottege 8",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
+    },
+    {
+      "slug": "Cottege 9",
+      "name": "Cottege 9",
+      "roomCount": 1,
+      "sleeps": 1,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
+    },
+    {
+      "slug": "Cottege 10",
+      "name": "Cottege 10",
+      "roomCount": 2.5,
       "sleeps": 7,
-      "shortDescription": "Three bedrooms with a separate family room — kids' wing on one side, parents' on the other.",
-      "longDescription": "Linden splits the floor plan: the primary suite is on one end of the cottage, the two kids' bedrooms and family room on the other. Great for families with older children or two couples traveling together.",
-      "features": [
-        "Split floor plan",
-        "Separate family room",
-        "Full kosher kitchen",
-        "2 bathrooms",
-        "Free Wi-Fi"
-      ],
+      "shortDescription": "Three bedrooms, full kitchen — our most-requested summer cabin.",
+      "longDescription": "-",
+      "features": [],
       "images": [
-        "/assets/img/placeholders/cabin-linden-1.jpg",
-        "/assets/img/placeholders/cabin-linden-2.jpg"
+        "/assets/img/uploads/cottage-10.jpg"
       ]
     },
     {
-      "slug": "beech-cottage",
-      "name": "The Beech Cottage",
-      "roomCount": 3.5,
-      "sleeps": 8,
-      "shortDescription": "Three bedrooms plus a true office nook — workable Wi-Fi for the parent who can't unplug.",
-      "longDescription": "Beech is our pick for families where one parent has to keep one foot in the office. Three bedrooms (queen + bunks + twins), a small den / office nook with a desk and dedicated mesh Wi-Fi, full kosher kitchen, two baths.",
-      "features": [
-        "3 bedrooms + office nook",
-        "Mesh Wi-Fi",
-        "2 bathrooms",
-        "Full kosher kitchen",
-        "Quiet end of property"
-      ],
+      "slug": "Cottege 11",
+      "name": "Cottege 11",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
+    },
+    {
+      "slug": "Cottege 12",
+      "name": "Cottege 12",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
+    },
+    {
+      "slug": "Cottege 13",
+      "name": "Cottege 13",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
+    },
+    {
+      "slug": "Cottege 14",
+      "name": "Cottege 14",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
       "images": [
-        "/assets/img/placeholders/cabin-beech-1.jpg",
-        "/assets/img/placeholders/cabin-beech-2.jpg"
+        "/assets/img/uploads/cottage-14.jpg"
       ]
     },
     {
-      "slug": "oak-cottage",
-      "name": "The Oak Cottage",
-      "roomCount": 3.5,
-      "sleeps": 9,
-      "shortDescription": "Our largest layout: three bedrooms, a bunk room, two baths, full kosher kitchen.",
-      "longDescription": "Oak adds a dedicated bunk room (four built-in bunks) to the standard three-bedroom plan — perfect for cousins or a long Yom Tov with grandchildren visiting. Two full baths, full kosher kitchen with double oven, generous living-dining area, and a covered porch.",
-      "features": [
-        "3 bedrooms + bunk room",
-        "Double oven",
-        "2 bathrooms",
-        "Covered porch",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-oak-1.jpg",
-        "/assets/img/placeholders/cabin-oak-2.jpg"
-      ]
+      "slug": "Cottege 15",
+      "name": "Cottege 15",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
     },
     {
-      "slug": "hickory-cottage",
-      "name": "The Hickory Cottage",
-      "roomCount": 3.5,
-      "sleeps": 10,
-      "shortDescription": "Three bedrooms, finished basement playroom, sleeps ten — for the biggest gatherings.",
-      "longDescription": "Hickory's secret weapon is the finished basement: a full playroom with toys, a sleeper sofa, and a half-bath. Upstairs, three bedrooms sleep seven; downstairs adds three more on the sleeper and a futon. The choice for extended families.",
-      "features": [
-        "3 bedrooms + finished basement",
-        "Playroom",
-        "Sleeps 10",
-        "2.5 bathrooms",
-        "Full kosher kitchen"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-hickory-1.jpg",
-        "/assets/img/placeholders/cabin-hickory-2.jpg"
-      ]
-    },
-    {
-      "slug": "dogwood-cottage",
-      "name": "The Dogwood Cottage",
-      "roomCount": 3.5,
-      "sleeps": 9,
-      "shortDescription": "Three bedrooms, library nook, screened porch — the quiet end of the property.",
-      "longDescription": "Dogwood sits at the far end of the lane, where the woods are densest and the road noise disappears. Three bedrooms, a small library nook with a reading chair, a screened porch, and a full kosher kitchen. Sleeps up to nine.",
-      "features": [
-        "3 bedrooms + library nook",
-        "Screened porch",
-        "Quiet location",
-        "Full kosher kitchen",
-        "Free Wi-Fi"
-      ],
-      "images": [
-        "/assets/img/placeholders/cabin-dogwood-1.jpg",
-        "/assets/img/placeholders/cabin-dogwood-2.jpg"
-      ]
+      "slug": "Cottege 16",
+      "name": "Cottege 16",
+      "roomCount": 1,
+      "sleeps": 2,
+      "shortDescription": "-",
+      "longDescription": "-",
+      "features": [],
+      "images": []
     }
   ]
 }
