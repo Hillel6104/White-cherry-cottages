@@ -48,7 +48,6 @@
         <li><a href="/amenities.html" class="hover:text-cherry" :class="isActive('/amenities.html') ? 'text-cherry' : 'text-ink/80'">Amenities</a></li>
         <li><a href="/gallery.html" class="hover:text-cherry" :class="isActive('/gallery.html') ? 'text-cherry' : 'text-ink/80'">Gallery</a></li>
         <li><a href="/contact.html" class="hover:text-cherry" :class="isActive('/contact.html') ? 'text-cherry' : 'text-ink/80'">Contact</a></li>
-        <li><a href="/contact.html" class="ml-2 inline-flex items-center px-4 py-2 rounded-full bg-cherry text-white hover:bg-cherry-dark transition">Book Now</a></li>
       </ul>
       <button @click="mobileNavOpen = !mobileNavOpen" class="lg:hidden p-2 rounded-md hover:bg-wood-light/40" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -61,7 +60,6 @@
         <li><a href="/amenities.html" class="block py-2">Amenities</a></li>
         <li><a href="/gallery.html" class="block py-2">Gallery</a></li>
         <li><a href="/contact.html" class="block py-2">Contact</a></li>
-        <li class="pt-2"><a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-full bg-cherry text-white">Book Now</a></li>
       </ul>
     </div>
   </header>
@@ -135,9 +133,9 @@
       <div @click.outside="closeCabin()" class="bg-cream rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         <template x-if="selected">
           <div>
-            <div class="relative">
+            <div class="relative bg-ink/95">
               <img :src="selected.images && selected.images[activeImgIdx]" :alt="selected.name"
-                   onerror="wccImgFallback(this)" class="w-full aspect-[16/9] object-cover" />
+                   onerror="wccImgFallback(this)" class="w-full max-h-[70vh] object-contain mx-auto" />
               <button @click="closeCabin()" aria-label="Close" class="absolute top-3 right-3 bg-white/90 hover:bg-white p-2 rounded-full">
                 <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M4.3 4.3a1 1 0 011.4 0L10 8.6l4.3-4.3a1 1 0 111.4 1.4L11.4 10l4.3 4.3a1 1 0 01-1.4 1.4L10 11.4l-4.3 4.3a1 1 0 01-1.4-1.4L8.6 10 4.3 5.7a1 1 0 010-1.4z"/></svg>
               </button>
