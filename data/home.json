@@ -1,11 +1,17 @@
 {
   "hero": {
-    "image": "/assets/img/placeholders/hero.jpg",
+    "image": "/assets/img/uploads/10c240_b738b0694d854aa1a3aa27ff4ef83ff7.jpg",
     "eyebrow": "Bethlehem, New Hampshire",
     "headline": "Where the mountains feel like family.",
     "subhead": "Sixteen warm, light-filled cottages built for restful weekends, long summers, and slow Shabbosos in the White Mountains.",
-    "ctaPrimary": { "label": "Explore the cabins", "href": "/cabins.html" },
-    "ctaSecondary": { "label": "Plan your stay", "href": "/contact.html" }
+    "ctaPrimary": {
+      "label": "Explore the cabins",
+      "href": "/cabins.html"
+    },
+    "ctaSecondary": {
+      "label": "Plan your stay",
+      "href": "/contact.html"
+    }
   },
   "welcome": {
     "heading": "A quiet corner of the White Mountains, kept for your family.",
