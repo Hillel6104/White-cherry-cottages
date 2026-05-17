@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>White Cherry Cottages — A family retreat in Bethlehem, NH</title>
+  <meta name="description" content="Sixteen family-friendly cottages on a quiet wooded ridge in Bethlehem, NH. Heated pool, on-site shul and mikvah, playground, and a warm welcome." />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🍒</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/site.js"></script>
+  <script>window.wccTailwindConfig();</script>
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="siteShell()" x-init="init()" class="bg-cream text-ink antialiased">
+
+  <!-- Announcement bar -->
+  <div x-cloak x-show="siteLoaded && bannerOpen && site.announcement && site.announcement.text"
+       x-transition.opacity
+       class="bg-sky-soft text-forest border-b border-sky/40">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4 text-sm">
+      <p class="flex-1 text-center sm:text-left">
+        <span x-text="site && site.announcement ? site.announcement.text : ''"></span>
+        <template x-if="site && site.announcement && site.announcement.link">
+          <a :href="site.announcement.link" class="underline underline-offset-2 ml-2 font-medium hover:text-cherry"
+             x-text="site.announcement.linkLabel || 'Learn more'"></a>
+        </template>
+      </p>
+      <button @click="dismissBanner()" aria-label="Dismiss announcement"
+              class="shrink-0 text-forest/70 hover:text-forest">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M4.3 4.3a1 1 0 011.4 0L10 8.6l4.3-4.3a1 1 0 111.4 1.4L11.4 10l4.3 4.3a1 1 0 01-1.4 1.4L10 11.4l-4.3 4.3a1 1 0 01-1.4-1.4L8.6 10 4.3 5.7a1 1 0 010-1.4z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-40 nav-glass border-b border-wood/10">
+    <nav class="max-w-7xl mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-2 font-display text-xl text-ink">
+        <span aria-hidden="true" class="text-cherry">🍒</span>
+        <span x-text="site && site.brand ? site.brand : 'White Cherry Cottages'">White Cherry Cottages</span>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <li><a href="/index.html" class="hover:text-cherry" :class="isActive('/index.html') ? 'text-cherry' : 'text-ink/80'">Home</a></li>
+        <li><a href="/cabins.html" class="hover:text-cherry" :class="isActive('/cabins.html') ? 'text-cherry' : 'text-ink/80'">Cabins</a></li>
+        <li><a href="/amenities.html" class="hover:text-cherry" :class="isActive('/amenities.html') ? 'text-cherry' : 'text-ink/80'">Amenities</a></li>
+        <li><a href="/gallery.html" class="hover:text-cherry" :class="isActive('/gallery.html') ? 'text-cherry' : 'text-ink/80'">Gallery</a></li>
+        <li><a href="/contact.html" class="hover:text-cherry" :class="isActive('/contact.html') ? 'text-cherry' : 'text-ink/80'">Contact</a></li>
+        <li><a href="/contact.html" class="ml-2 inline-flex items-center px-4 py-2 rounded-full bg-cherry text-white hover:bg-cherry-dark transition">Book Now</a></li>
+      </ul>
+
+      <button @click="mobileNavOpen = !mobileNavOpen" class="lg:hidden p-2 rounded-md hover:bg-wood-light/40" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div x-cloak x-show="mobileNavOpen" x-transition.origin.top class="lg:hidden border-t border-wood/10 bg-cream">
+      <ul class="px-4 py-3 space-y-2 text-base">
+        <li><a href="/index.html" class="block py-2">Home</a></li>
+        <li><a href="/cabins.html" class="block py-2">Cabins</a></li>
+        <li><a href="/amenities.html" class="block py-2">Amenities</a></li>
+        <li><a href="/gallery.html" class="block py-2">Gallery</a></li>
+        <li><a href="/contact.html" class="block py-2">Contact</a></li>
+        <li class="pt-2"><a href="/contact.html" class="inline-flex items-center px-4 py-2 rounded-full bg-cherry text-white">Book Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <main x-data="homePage()" x-init="load()">
+    <!-- Hero -->
+    <section class="relative h-[88vh] min-h-[560px] flex items-center justify-center text-white overflow-hidden">
+      <img :src="home && home.hero ? home.hero.image : '/assets/img/placeholders/hero.jpg'"
+           alt="" onerror="wccImgFallback(this)"
+           class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 max-w-3xl text-center px-6">
+        <p x-cloak x-show="home" class="uppercase tracking-[0.25em] text-xs sm:text-sm text-white/85 mb-4"
+           x-text="home && home.hero ? home.hero.eyebrow : ''"></p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white"
+            x-text="home && home.hero ? home.hero.headline : 'Where the mountains feel like family.'">Where the mountains feel like family.</h1>
+        <p class="mt-5 text-lg text-white/90 max-w-2xl mx-auto"
+           x-text="home && home.hero ? home.hero.subhead : ''"></p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a :href="home && home.hero ? home.hero.ctaPrimary.href : '/cabins.html'"
+             class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-cherry text-white hover:bg-cherry-dark transition"
+             x-text="home && home.hero ? home.hero.ctaPrimary.label : 'Explore the cabins'">Explore the cabins</a>
+          <a :href="home && home.hero ? home.hero.ctaSecondary.href : '/contact.html'"
+             class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white/95 text-ink hover:bg-white transition"
+             x-text="home && home.hero ? home.hero.ctaSecondary.label : 'Plan your stay'">Plan your stay</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome -->
+    <section class="py-20 lg:py-28">
+      <div class="max-w-6xl mx-auto px-4 lg:px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="uppercase tracking-[0.25em] text-xs text-wood mb-3">Welcome</p>
+          <h2 class="font-display text-3xl lg:text-4xl leading-tight"
+              x-text="home && home.welcome ? home.welcome.heading : ''"></h2>
+          <p class="mt-5 text-ink/80 leading-relaxed"
+             x-text="home && home.welcome ? home.welcome.body : ''"></p>
+        </div>
+        <div>
+          <img :src="home && home.welcome ? home.welcome.image : ''" alt="" onerror="wccImgFallback(this)"
+               class="rounded-2xl shadow-xl w-full aspect-[5/4] object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Teasers -->
+    <section class="py-16 lg:py-24 bg-white border-y border-wood/10">
+      <div class="max-w-7xl mx-auto px-4 lg:px-6">
+        <div class="max-w-2xl mb-12">
+          <p class="uppercase tracking-[0.25em] text-xs text-wood mb-3">Around the property</p>
+          <h2 class="font-display text-3xl lg:text-4xl leading-tight">Three things to know before you come.</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <template x-for="t in (home ? home.teasers : [])" :key="t.title">
+            <a :href="t.href" class="card-lift bg-cream rounded-2xl overflow-hidden border border-wood/10 block">
+              <img :src="t.image" :alt="t.title" onerror="wccImgFallback(this)"
+                   class="w-full aspect-[4/3] object-cover" />
+              <div class="p-6">
+                <h3 class="font-display text-xl" x-text="t.title"></h3>
+                <p class="mt-2 text-ink/75 text-sm leading-relaxed" x-text="t.body"></p>
+                <span class="mt-4 inline-flex items-center text-cherry text-sm font-medium">
+                  <span x-text="t.ctaLabel || 'Learn more'"></span>
+                  <svg class="w-4 h-4 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                </span>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <svg class="w-10 h-10 mx-auto text-wood-light mb-6" viewBox="0 0 32 32" fill="currentColor"><path d="M9 7h7v7H12v3a4 4 0 01-4 4v-3a2 2 0 002-2H9V7zm10 0h7v7h-4v3a4 4 0 01-4 4v-3a2 2 0 002-2h-1V7z"/></svg>
+        <blockquote class="font-display text-2xl lg:text-3xl leading-snug text-ink/90 italic"
+                    x-text="home && home.quote ? home.quote.text : ''"></blockquote>
+        <p class="mt-6 text-sm uppercase tracking-[0.2em] text-wood"
+           x-text="home && home.quote ? home.quote.attribution : ''"></p>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="bg-forest text-cream py-16">
+      <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-[2fr,1fr] gap-8 items-center">
+        <div>
+          <h2 class="font-display text-3xl lg:text-4xl text-white"
+              x-text="home && home.closingCta ? home.closingCta.heading : ''"></h2>
+          <p class="mt-3 text-cream/85 max-w-xl"
+             x-text="home && home.closingCta ? home.closingCta.body : ''"></p>
+        </div>
+        <div class="lg:text-right">
+          <a :href="home && home.closingCta ? home.closingCta.ctaHref : '/contact.html'"
+             class="inline-flex items-center px-6 py-3 rounded-full bg-cherry text-white hover:bg-cherry-dark transition"
+             x-text="home && home.closingCta ? home.closingCta.ctaLabel : 'Get in touch'">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-cream/85">
+    <div class="max-w-7xl mx-auto px-4 lg:px-6 py-14 grid md:grid-cols-3 gap-10">
+      <div>
+        <p class="font-display text-2xl text-white" x-text="site ? site.brand : 'White Cherry Cottages'"></p>
+        <p class="mt-3 text-sm leading-relaxed text-cream/70" x-text="site ? site.footerBlurb : ''"></p>
+      </div>
+      <div>
+        <p class="uppercase tracking-[0.2em] text-xs text-cream/60 mb-3">Visit</p>
+        <ul class="space-y-1 text-sm">
+          <li><a href="/index.html" class="hover:text-white">Home</a></li>
+          <li><a href="/cabins.html" class="hover:text-white">Cabins</a></li>
+          <li><a href="/amenities.html" class="hover:text-white">Amenities</a></li>
+          <li><a href="/gallery.html" class="hover:text-white">Gallery</a></li>
+          <li><a href="/contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="uppercase tracking-[0.2em] text-xs text-cream/60 mb-3">Find us</p>
+        <p class="text-sm" x-text="fullAddress()"></p>
+        <p class="mt-2 text-sm">
+          <a :href="site ? site.phoneHref : '#'" class="hover:text-white" x-text="site ? site.phone : ''"></a>
+        </p>
+        <p class="text-sm">
+          <a :href="site ? 'mailto:' + site.email : '#'" class="hover:text-white" x-text="site ? site.email : ''"></a>
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 lg:px-6 py-5 flex flex-col sm:flex-row justify-between gap-2 text-xs text-cream/60">
+        <p>&copy; <span x-text="year"></span> <span x-text="site ? site.brand : ''"></span>. All rights reserved.</p>
+        <p>Bethlehem, NH · White Mountains</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page-specific data fetch -->
+  <script>
+    function homePage () {
+      return {
+        home: null,
+        async load () {
+          try { this.home = await fetch('/data/home.json').then(r => r.json()); }
+          catch (e) { console.error(e); }
+        }
+      };
+    }
+  </script>
+</body>
+</html>

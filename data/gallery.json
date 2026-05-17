@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "heading": "A look around the property.",
+    "body": "Cottages, grounds, the pool in summer, the woods in winter. Click any photo to view it full size."
+  },
+  "categories": ["All", "Cabins", "Grounds", "Pool", "Winter"],
+  "images": [
+    { "src": "/assets/img/placeholders/gallery-1.jpg", "alt": "Front porch of a white cottage in summer", "category": "Cabins" },
+    { "src": "/assets/img/placeholders/gallery-2.jpg", "alt": "Heated outdoor pool surrounded by white fencing", "category": "Pool" },
+    { "src": "/assets/img/placeholders/gallery-3.jpg", "alt": "Wooded path between cottages", "category": "Grounds" },
+    { "src": "/assets/img/placeholders/gallery-4.jpg", "alt": "Living room with stone fireplace", "category": "Cabins" },
+    { "src": "/assets/img/placeholders/gallery-5.jpg", "alt": "Children on the playground", "category": "Grounds" },
+    { "src": "/assets/img/placeholders/gallery-6.jpg", "alt": "Snow-covered cottage in winter", "category": "Winter" },
+    { "src": "/assets/img/placeholders/gallery-7.jpg", "alt": "Kitchen with kosher setup", "category": "Cabins" },
+    { "src": "/assets/img/placeholders/gallery-8.jpg", "alt": "Pool deck with lounge chairs", "category": "Pool" },
+    { "src": "/assets/img/placeholders/gallery-9.jpg", "alt": "Mountain view from the property", "category": "Grounds" },
+    { "src": "/assets/img/placeholders/gallery-10.jpg", "alt": "Snowy walking path", "category": "Winter" },
+    { "src": "/assets/img/placeholders/gallery-11.jpg", "alt": "Bedroom with white linens", "category": "Cabins" },
+    { "src": "/assets/img/placeholders/gallery-12.jpg", "alt": "Book room with shelves", "category": "Grounds" }
+  ]
+}

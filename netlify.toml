@@ -1,0 +1,44 @@
+# Netlify deploy configuration for White Cherry Cottages.
+
+[build]
+  publish = "."
+
+# Pretty URLs: /cabins should resolve to /cabins.html.
+[[redirects]]
+  from = "/cabins"
+  to = "/cabins.html"
+  status = 200
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 200
+[[redirects]]
+  from = "/amenities"
+  to = "/amenities.html"
+  status = 200
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+# JSON content should refresh quickly so CMS edits appear right away.
+[[headers]]
+  for = "/data/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Static assets can be cached aggressively (hash-busted via file names when changed).
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"

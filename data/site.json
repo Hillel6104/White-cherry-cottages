@@ -1,0 +1,25 @@
+{
+  "brand": "White Cherry Cottages",
+  "tagline": "A family retreat in the White Mountains",
+  "announcement": {
+    "text": "We open on [Opening Date] — reserve your cabin today.",
+    "link": "/contact.html",
+    "linkLabel": "Contact us"
+  },
+  "phone": "(555) 555-0100",
+  "phoneHref": "tel:+15555550100",
+  "email": "info@whitecherrycottages.com",
+  "address": {
+    "line1": "123 Mountain View Road",
+    "line2": "",
+    "city": "Bethlehem",
+    "state": "NH",
+    "zip": "03574"
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "whatsapp": ""
+  },
+  "footerBlurb": "Sixteen cozy cottages tucked into the White Mountains of Bethlehem, NH — built for families who want comfort, community, and quiet."
+}

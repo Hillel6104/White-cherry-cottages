@@ -1,0 +1,21 @@
+{
+  "heading": "Plan your stay.",
+  "subhead": "We answer every inquiry personally — usually within the same day. Call, email, or send us a note and we'll help you find the right cottage.",
+  "bookingInstructions": "For the fastest answer, call us. For dates further out, email is fine — please include the dates you're considering and how many adults and children will be coming.",
+  "callLabel": "Call to Book",
+  "emailLabel": "Email Us",
+  "officeHours": [
+    { "days": "Sunday – Thursday", "hours": "9:00 AM – 7:00 PM ET" },
+    { "days": "Friday", "hours": "9:00 AM – 1:00 PM ET" },
+    { "days": "Saturday", "hours": "Closed for Shabbos" }
+  ],
+  "mapEmbedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181000!2d-71.78!3d44.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBethlehem%2C%20NH!5e0!3m2!1sen!2sus!4v1700000000000",
+  "distances": [
+    { "label": "Boston, MA", "value": "≈ 3 hrs" },
+    { "label": "New York, NY", "value": "≈ 6 hrs" },
+    { "label": "Montreal, QC", "value": "≈ 3 hrs" },
+    { "label": "Manchester, NH (airport)", "value": "≈ 2 hrs" }
+  ],
+  "formEnabled": true,
+  "formNote": "Or send a quick note — we'll get back to you with availability."
+}

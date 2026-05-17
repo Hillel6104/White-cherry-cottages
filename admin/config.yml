@@ -1,0 +1,284 @@
+# Decap CMS configuration for White Cherry Cottages.
+# Owner edits content at /admin/ via Netlify Identity; changes are committed
+# straight to the `main` branch by git-gateway and Netlify rebuilds the site.
+
+backend:
+  name: git-gateway
+  branch: main
+
+# All uploaded images land here. public_folder is the URL path used in the HTML.
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+# Allow the owner to save drafts before publishing.
+publish_mode: editorial_workflow
+
+# Site URLs help Decap render preview links.
+site_url: https://whitecherrycottages.netlify.app
+display_url: https://whitecherrycottages.netlify.app
+logo_url: /assets/img/placeholders/teaser-cabins.jpg
+
+collections:
+  # -------------------------------------------------------------------------
+  # 1. Site-wide settings: announcement bar, contact basics, footer blurb.
+  # -------------------------------------------------------------------------
+  - name: "site"
+    label: "Site Settings"
+    description: "Announcement bar, phone, email, address, footer text — appears on every page."
+    files:
+      - name: "site"
+        label: "Site"
+        file: "data/site.json"
+        format: "json"
+        fields:
+          - { name: "brand", label: "Brand name", widget: "string", default: "White Cherry Cottages" }
+          - { name: "tagline", label: "Tagline (short)", widget: "string", required: false }
+          - name: "announcement"
+            label: "Announcement bar"
+            widget: "object"
+            fields:
+              - { name: "text", label: "Message", widget: "string", hint: "e.g. 'We open on June 15'. Leave blank to hide the bar." }
+              - { name: "link", label: "Link URL", widget: "string", required: false }
+              - { name: "linkLabel", label: "Link label", widget: "string", required: false }
+          - { name: "phone", label: "Phone (display)", widget: "string" }
+          - { name: "phoneHref", label: "Phone (dial)", widget: "string", hint: "Use tel:+15551234567 format." }
+          - { name: "email", label: "Email", widget: "string" }
+          - name: "address"
+            label: "Address"
+            widget: "object"
+            fields:
+              - { name: "line1", label: "Street address", widget: "string" }
+              - { name: "line2", label: "Address line 2", widget: "string", required: false }
+              - { name: "city", label: "City", widget: "string" }
+              - { name: "state", label: "State", widget: "string" }
+              - { name: "zip", label: "ZIP / Postal code", widget: "string" }
+          - name: "social"
+            label: "Social links"
+            widget: "object"
+            required: false
+            fields:
+              - { name: "instagram", label: "Instagram URL", widget: "string", required: false }
+              - { name: "facebook", label: "Facebook URL", widget: "string", required: false }
+              - { name: "whatsapp", label: "WhatsApp URL", widget: "string", required: false }
+          - { name: "footerBlurb", label: "Footer blurb", widget: "text" }
+
+  # -------------------------------------------------------------------------
+  # 2. Home page
+  # -------------------------------------------------------------------------
+  - name: "home"
+    label: "Home Page"
+    description: "Edit the home page hero, welcome text, teasers, and quote."
+    files:
+      - name: "home"
+        label: "Home"
+        file: "data/home.json"
+        format: "json"
+        fields:
+          - name: "hero"
+            label: "Hero"
+            widget: "object"
+            fields:
+              - { name: "image", label: "Hero image", widget: "image" }
+              - { name: "eyebrow", label: "Eyebrow (small text above headline)", widget: "string", required: false }
+              - { name: "headline", label: "Headline", widget: "string" }
+              - { name: "subhead", label: "Subhead", widget: "text" }
+              - name: "ctaPrimary"
+                label: "Primary button"
+                widget: "object"
+                fields:
+                  - { name: "label", label: "Button text", widget: "string" }
+                  - { name: "href", label: "Button link", widget: "string" }
+              - name: "ctaSecondary"
+                label: "Secondary button"
+                widget: "object"
+                fields:
+                  - { name: "label", label: "Button text", widget: "string" }
+                  - { name: "href", label: "Button link", widget: "string" }
+          - name: "welcome"
+            label: "Welcome section"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+              - { name: "image", label: "Inset image", widget: "image" }
+          - name: "teasers"
+            label: "Teaser cards (3)"
+            widget: "list"
+            min: 1
+            max: 6
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+              - { name: "image", label: "Image", widget: "image" }
+              - { name: "href", label: "Link", widget: "string" }
+              - { name: "ctaLabel", label: "CTA label", widget: "string", required: false }
+          - name: "quote"
+            label: "Pull quote"
+            widget: "object"
+            fields:
+              - { name: "text", label: "Quote", widget: "text" }
+              - { name: "attribution", label: "Attribution", widget: "string" }
+          - name: "closingCta"
+            label: "Closing CTA strip"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+              - { name: "ctaLabel", label: "Button label", widget: "string" }
+              - { name: "ctaHref", label: "Button link", widget: "string" }
+
+  # -------------------------------------------------------------------------
+  # 3. Cabins (single JSON file, list of cabin objects)
+  # -------------------------------------------------------------------------
+  - name: "cabins"
+    label: "Cabins"
+    description: "Add, edit, reorder, or remove cabins. Each cabin can have multiple photos."
+    files:
+      - name: "cabins"
+        label: "Cabin list"
+        file: "data/cabins.json"
+        format: "json"
+        fields:
+          - name: "intro"
+            label: "Intro band"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+          - name: "cabins"
+            label: "Cabins"
+            label_singular: "Cabin"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.roomCount}}-room, sleeps {{fields.sleeps}}"
+            min: 1
+            fields:
+              - { name: "slug", label: "URL slug", widget: "string", hint: "Lowercase, dashes only (e.g. birch-suite)." }
+              - { name: "name", label: "Cabin name", widget: "string" }
+              - { name: "roomCount", label: "Room count", widget: "number", value_type: "float", min: 1, max: 6, step: 0.5 }
+              - { name: "sleeps", label: "Sleeps (max guests)", widget: "number", value_type: "int", min: 1, max: 14 }
+              - { name: "shortDescription", label: "Short description", widget: "text" }
+              - { name: "longDescription", label: "Long description", widget: "text" }
+              - name: "features"
+                label: "Features"
+                widget: "list"
+                field: { name: "feature", label: "Feature", widget: "string" }
+              - name: "images"
+                label: "Photos"
+                widget: "list"
+                field: { name: "image", label: "Photo", widget: "image" }
+
+  # -------------------------------------------------------------------------
+  # 4. Amenities
+  # -------------------------------------------------------------------------
+  - name: "amenities"
+    label: "Amenities"
+    description: "On-site amenities and the closing community band."
+    files:
+      - name: "amenities"
+        label: "Amenities"
+        file: "data/amenities.json"
+        format: "json"
+        fields:
+          - name: "intro"
+            label: "Intro"
+            widget: "object"
+            fields:
+              - { name: "eyebrow", label: "Eyebrow", widget: "string", required: false }
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+          - name: "items"
+            label: "Amenities"
+            label_singular: "Amenity"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "body", label: "Description", widget: "text" }
+              - name: "iconKey"
+                label: "Icon"
+                widget: "select"
+                options:
+                  - { label: "Sun (pool, outdoors)", value: "sun" }
+                  - { label: "Open book (book room, library)", value: "book-open" }
+                  - { label: "Swing (playground)", value: "swing" }
+                  - { label: "Star (shul, community)", value: "star" }
+                  - { label: "Droplet (mikvah)", value: "droplet" }
+                  - { label: "Snowflake (frozen food, winter)", value: "snowflake" }
+                  - { label: "House (general)", value: "home" }
+                  - { label: "Tree (grounds, nature)", value: "tree" }
+                default: "home"
+              - { name: "image", label: "Image (optional)", widget: "image", required: false }
+          - name: "closing"
+            label: "Closing band"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+              - { name: "ctaLabel", label: "Button label", widget: "string" }
+              - { name: "ctaHref", label: "Button link", widget: "string" }
+
+  # -------------------------------------------------------------------------
+  # 5. Gallery
+  # -------------------------------------------------------------------------
+  - name: "gallery"
+    label: "Gallery"
+    description: "Photos shown on the Gallery page. Drag to reorder."
+    files:
+      - name: "gallery"
+        label: "Gallery"
+        file: "data/gallery.json"
+        format: "json"
+        fields:
+          - name: "intro"
+            label: "Intro"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "body", label: "Body", widget: "text" }
+          - name: "categories"
+            label: "Filter categories"
+            widget: "list"
+            hint: "First item should always be 'All'."
+            field: { name: "category", label: "Category", widget: "string" }
+          - name: "images"
+            label: "Photos"
+            label_singular: "Photo"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: "src", label: "Image", widget: "image" }
+              - { name: "alt", label: "Alt text (description)", widget: "string" }
+              - { name: "category", label: "Category", widget: "string", hint: "Must match a category above (e.g. Cabins, Pool, Grounds, Winter)." }
+
+  # -------------------------------------------------------------------------
+  # 6. Contact page
+  # -------------------------------------------------------------------------
+  - name: "contact"
+    label: "Contact Page"
+    description: "Contact page copy, office hours, map, and driving distances."
+    files:
+      - name: "contact"
+        label: "Contact"
+        file: "data/contact.json"
+        format: "json"
+        fields:
+          - { name: "heading", label: "Page heading", widget: "string" }
+          - { name: "subhead", label: "Subhead", widget: "text" }
+          - { name: "bookingInstructions", label: "Booking instructions", widget: "text" }
+          - { name: "callLabel", label: "Call card label", widget: "string", default: "Call to Book" }
+          - { name: "emailLabel", label: "Email card label", widget: "string", default: "Email Us" }
+          - name: "officeHours"
+            label: "Office hours"
+            widget: "list"
+            fields:
+              - { name: "days", label: "Days", widget: "string" }
+              - { name: "hours", label: "Hours", widget: "string" }
+          - { name: "mapEmbedSrc", label: "Google Maps embed src", widget: "text", hint: "From Google Maps → Share → Embed a map → copy the src attribute." }
+          - name: "distances"
+            label: "Driving distances"
+            widget: "list"
+            fields:
+              - { name: "label", label: "Place", widget: "string" }
+              - { name: "value", label: "Distance / time", widget: "string" }
+          - { name: "formEnabled", label: "Show contact form", widget: "boolean", default: true }
+          - { name: "formNote", label: "Note above the form", widget: "string", required: false }
