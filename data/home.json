@@ -1,36 +1,42 @@
 {
   "hero": {
-    "image": "/assets/img/placeholders/hero.jpg",
+    "image": "/assets/img/uploads/10c240_b738b0694d854aa1a3aa27ff4ef83ff7.jpg",
     "eyebrow": "Bethlehem, New Hampshire",
     "headline": "Where the mountains feel like family.",
     "subhead": "Sixteen warm, light-filled cottages built for restful weekends, long summers, and slow Shabbosos in the White Mountains.",
-    "ctaPrimary": { "label": "Explore the cabins", "href": "/cabins.html" },
-    "ctaSecondary": { "label": "Plan your stay", "href": "/contact.html" }
+    "ctaPrimary": {
+      "label": "Explore the cabins",
+      "href": "/cabins.html"
+    },
+    "ctaSecondary": {
+      "label": "Plan your stay",
+      "href": "/contact.html"
+    }
   },
   "welcome": {
     "heading": "A quiet corner of the White Mountains, kept for your family.",
     "body": "From the porch swing to the playground, White Cherry Cottages is built around the idea that a vacation should feel like exhaling. Our property sits on a wooded ridge in Bethlehem, NH — minutes from Franconia Notch, walking distance to shul, and an easy drive from Boston, New York, and Montreal. Whether you come for a weekend or the whole summer, our cottages welcome you the same way: warm wood floors, fresh linens, and a kitchen ready for your family.",
-    "image": "/assets/img/placeholders/welcome.jpg"
+    "image": "/assets/img/uploads/10c240_e7f223607d814532aed74093ef942fbd.jpg"
   },
   "teasers": [
     {
       "title": "The Cabins",
       "body": "Sixteen cottages, from one-room suites for couples to spacious 3.5-room family cabins.",
-      "image": "/assets/img/placeholders/teaser-cabins.jpg",
+      "image": "/assets/img/uploads/10c240_317e6e3ecdc141ed8abccaf27aacbec7_mv2_d_2340_4160_s_2.jpg",
       "href": "/cabins.html",
       "ctaLabel": "See all cabins"
     },
     {
       "title": "Amenities",
       "body": "Heated outdoor pool, book room, playground, on-site shul and mikvah, and frozen food on hand.",
-      "image": "/assets/img/placeholders/teaser-amenities.jpg",
+      "image": "/assets/img/uploads/10c240_4686aba13db74b068c1de6726f5ae6d6.jpg",
       "href": "/amenities.html",
       "ctaLabel": "What's on site"
     },
     {
       "title": "The Gallery",
       "body": "A look around the grounds, the cottages, and the mountains that frame them.",
-      "image": "/assets/img/placeholders/teaser-gallery.jpg",
+      "image": "/assets/img/uploads/cottage-1.jpg",
       "href": "/gallery.html",
       "ctaLabel": "Browse photos"
     }
