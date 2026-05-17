@@ -115,11 +115,23 @@ collections:
               - { name: "href", label: "Link", widget: "string" }
               - { name: "ctaLabel", label: "CTA label", widget: "string", required: false }
           - name: "quote"
-            label: "Pull quote"
+            label: "Pull quote (fallback if no reviews)"
             widget: "object"
+            hint: "Shown only if the Reviews list below is empty."
             fields:
               - { name: "text", label: "Quote", widget: "text" }
               - { name: "attribution", label: "Attribution", widget: "string" }
+          - name: "reviews"
+            label: "Reviews (auto-scrolling)"
+            label_singular: "Review"
+            widget: "list"
+            required: false
+            summary: "{{fields.attribution}} — {{fields.text}}"
+            hint: "Add 2+ reviews to show the auto-scrolling band. With 0 or 1, the single pull-quote above is shown instead."
+            fields:
+              - { name: "text", label: "Review text", widget: "text" }
+              - { name: "attribution", label: "Reviewer name + location", widget: "string", hint: "e.g. The Goldberg family, Brooklyn NY" }
+              - { name: "rating", label: "Stars (1–5)", widget: "number", value_type: "int", min: 1, max: 5, default: 5, required: false }
           - name: "closingCta"
             label: "Closing CTA strip"
             widget: "object"
