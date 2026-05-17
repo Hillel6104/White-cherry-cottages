@@ -34,6 +34,7 @@ collections:
         fields:
           - { name: "brand", label: "Brand name", widget: "string", default: "White Cherry Cottages" }
           - { name: "tagline", label: "Tagline (short)", widget: "string", required: false }
+          - { name: "logo", label: "Logo image (optional)", widget: "image", required: false, hint: "Upload a logo to replace the text + cherry emoji in the top nav. Transparent PNG works best — aim for ~200px tall. Leave empty to keep the default text logo." }
           - name: "announcement"
             label: "Announcement bar"
             widget: "object"
