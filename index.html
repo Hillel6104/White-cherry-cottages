@@ -14,6 +14,16 @@
   <script>window.wccTailwindConfig();</script>
   <link rel="stylesheet" href="/assets/css/site.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Netlify Identity: recovery/invite/confirmation links redirect here (site root)
+       with a token in the URL hash. This widget must be present to detect it and
+       open the "set password" dialog automatically. -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', () => {});
+    }
+  </script>
 </head>
 <body x-data="siteShell()" x-init="init()" class="bg-cream text-ink antialiased">
 
