@@ -15,9 +15,9 @@ public_folder: "/assets/img/uploads"
 # ever wants a review step back, change this to `publish_mode: editorial_workflow`.
 
 # Site URLs help Decap render preview links.
-site_url: https://whitecherrycottages.netlify.app
-display_url: https://whitecherrycottages.netlify.app
-logo_url: /assets/img/placeholders/teaser-cabins.jpg
+site_url: https://white-cherry-cottages.netlify.app
+display_url: https://white-cherry-cottages.netlify.app
+logo_url: /assets/img/uploads/chatgpt-image-may-17-2026-06_08_14-pm.png
 
 collections:
   # -------------------------------------------------------------------------

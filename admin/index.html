@@ -10,8 +10,12 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Decap CMS (the modern, maintained fork of Netlify CMS). Reads admin/config.yml. -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Decap CMS (the modern, maintained fork of Netlify CMS). Reads admin/config.yml.
+       Version is pinned deliberately. A range like ^3.0.0 lets unpkg serve whatever
+       3.x is newest, so an upstream release can break this CMS with no change on our
+       side — that is exactly what happened when 3.14.x shipped. Only bump this after
+       testing the new version against /admin/. -->
+  <script src="https://unpkg.com/decap-cms@3.12.2/dist/decap-cms.js"></script>
 
   <script>
     // When the user lands on /admin/ without being logged in, open the Identity
